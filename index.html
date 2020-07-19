@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div class="background">
+		<div class="nav">
+			<a class="a active" href="#">HOME</a>
+			<a class="b" href="#">ABOUT ME</a>
+			<a class="c" href="#">GALLERY</a>
+			<a class="d" href="#">CONTACT US</a>
+		</div>
+		<div class="content">
+			<div class="home">
+				<h1>I am Satyam Chaurasia</h1>
+				<h3>UI Designer</h3>
+			</div>
+			<div class="aboutus">
+				<p> <b>Hello Friends,</b><br/>
+					Welcome to my <b>Web Application.</b><br/>
+					This Web Application Learn About Web Technologies.
+					Props are just like parameters that are passed in a function or attributes in HTML tags, but these are user-defined, they carry some inputs to the component.
+				</p>
+				<p>
+					Modern web applications often contain three or more tiers, and depending on the size of the team a developer works on, he or she may specialize in one or more of these tiers - or may take a more interdisciplinary role. A web developer is usually classified as a Front-end web development or a Back-End Web Developer. For example, in a two-person team, one developer may focus on the technologies sent to the client such as HTML, JavaScript, CSS, ReactJs or AngularJS and on the server-side frameworks (such as Perl, Python, Ruby, PHP, Java, ASP, ASP.NET, Node.js) used to deliver content and scripts to the client. Meanwhile, the other developer might focus on the interaction between server-side frameworks, the webserver, and a database system. Further, depending on the size of their organization, the aforementioned developers might work closely with a content creator/copywriter, marketing adviser, user experience designer, web designer, web producer, project manager, software architect, or database administrator - or they may be responsible for such tasks as web design and project management themselves.
+				</p>
+			</div>
+
+			<div class="gallery">
+				<!--<h1>Hello i am Gallery</h1>-->
+				<div class="image">
+					<img src="Images/1.jpg"/>
+				</div>
+				<div class="image">
+					<img src="Images/2.jpg"/>
+				</div>
+				<div class="image">
+					<img src="Images/3.jpg"/>
+				</div>
+				<div class="image">
+					<img src="Images/4.jpg"/>
+				</div>
+				<div class="image">
+					<img src="Images/5.jpg"/>
+				</div>
+				<div class="image">
+					<img src="Images/6.jpg"/>
+				</div>
+				<div class="image">
+					<img src="Images/4.jpg"/>
+				</div>
+				<div class="image">
+					<img src="Images/4.jpg"/>
+				</div>
+				<div class="image">
+					<img src="Images/4.jpg"/>
+				</div>
+			</div>
+			<div class="contactus">
+				<div class="contactform">
+					<form action="index.html" method="post">
+						<input type="text" name="" class="inputtext" value="First Name">
+						<input type="text" name="" class="inputtext"
+						value="Last Name">
+						<input type="email" name=""class="inputtext" value="Your Email">
+						<textarea cols="4" rows="6" class="inputmessage">Your Messages...!!!</textarea>
+						<input type="button" name="" class="submitbutton" value="Submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('a').click(function(){
+				//alert("i am click");
+				var selected = $(this);
+				$('a').removeClass('active');
+				$(selected).addClass('active');
+			});
+			var $a = $('.a'),
+			$b = $('.b'),
+			$c = $('.c'),
+			$d = $('.d'),
+			$home = $('.home'),
+			$aboutus = $('.aboutus'),
+			$gallery = $('.gallery'),
+			$contactus = $('.contactus');
+
+			$a.click(function(){
+					$home.fadeIn();
+					$aboutus.fadeOut();
+					$gallery.fadeOut();
+					$contactus.fadeOut();
+			});
+			$b.click(function(){
+					$aboutus.fadeIn();
+					$home.fadeOut();
+					$gallery.fadeOut();
+					$contactus.fadeOut();
+			});
+			$c.click(function(){
+					$gallery.fadeIn();
+					$home.fadeOut();
+					$aboutus.fadeOut();
+					$contactus.fadeOut();
+			});
+			$d.click(function(){
+					$contactus.fadeIn();
+					$home.fadeOut();
+					$gallery.fadeOut();
+					$aboutus.fadeOut();
+			});
+
+		});
+	</script>
+</body>
+</html>
